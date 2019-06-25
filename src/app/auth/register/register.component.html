@@ -1,1 +1,86 @@
-<p>register works!</p>
+<section fxLayoutAlign="center center">
+  <mat-horizontal-stepper fxHide.lt-md linear="true">
+    <mat-step [stepControl]="namesForm">
+      <form [formGroup]="namesForm" fxLayout="column" fxLayoutAlign="center center">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Last name" formControlName="lastName">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="First name" formControlName="firstName">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="emailForm">
+      <form [formGroup]="emailForm" fxLayout="column" fxLayoutAlign="center center">
+        <ng-template matStepLabel>Provide your e-mail address</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="E-mail address" formControlName="email">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="passwordForm">
+      <form [formGroup]="passwordForm" fxLayout="column" fxLayoutAlign="center center">
+        <ng-template matStepLabel>Enter password</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Password" type="password" formControlName="password">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-raised-button [disabled]="passwordForm.invalid || emailForm.invalid || namesForm.invalid"
+                  class="submit-button">Submit
+          </button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+  <mat-vertical-stepper fxHide.gt-sm linear="true" fxFlex.xs="width: 100%!important">
+    <mat-step [stepControl]="namesForm">
+      <form [formGroup]="namesForm" fxLayout="column" fxLayoutAlign="center center">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Last name" formControlName="lastName">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="First name" formControlName="firstName">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="emailForm">
+      <form [formGroup]="emailForm" fxLayout="column" fxLayoutAlign="center center">
+        <ng-template matStepLabel>Provide your e-mail address</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="E-mail address" formControlName="email">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="passwordForm">
+      <form [formGroup]="passwordForm" fxLayout="column" fxLayoutAlign="center center">
+        <ng-template matStepLabel>Enter password</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Password" type="password" formControlName="password">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-raised-button [disabled]="passwordForm.invalid || emailForm.invalid || namesForm.invalid"
+                  class="submit-button">Submit
+          </button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-vertical-stepper>
+</section>

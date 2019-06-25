@@ -15,6 +15,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { TrainingsComponent } from './trainings/trainings.component';
 import { BasicsComponent } from './basics/basics.component';
 import { MyAccountComponent } from './my-account/my-account.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { MyAccountComponent } from './my-account/my-account.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

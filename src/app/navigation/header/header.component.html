@@ -1,11 +1,10 @@
-<mat-toolbar color="primary" fxLayoutAlign="center center">
-  <div fxHide.gt-sm fxFlex.lt-md="10%">
+<mat-toolbar color="primary" fxFlex fxLayout="center center">
+  <div fxHide.gt-sm>
     <button mat-icon-button (click)="onToggleSidenav()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
-  <div fxFlex.lt-md="30%"></div>
-  <div fxFlex.lt-md="60%"><button mat-button routerLink=""><mat-icon>fitness_center</mat-icon> WTP</button></div>
+  <div><button mat-button routerLink=""><mat-icon>fitness_center</mat-icon> WTP</button></div>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.lt-md>
     <ul fxLayout class="nav-items">
       <li><button mat-button class="nav-item" routerLink="/register">Register</button></li>
