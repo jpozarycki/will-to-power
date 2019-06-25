@@ -11,7 +11,9 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { FooterComponent } from './navigation/footer/footer.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {MatSidenavModule} from '@angular/material';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { TrainingsComponent } from './trainings/trainings.component';
+import { BasicsComponent } from './basics/basics.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,16 @@ import {MatSidenavModule} from '@angular/material';
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TrainingsComponent,
+    BasicsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

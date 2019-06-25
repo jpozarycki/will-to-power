@@ -1,0 +1,10 @@
+.mat-button {
+  font-weight: bolder;
+  letter-spacing: 0.03em;
+}
+.nav-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
