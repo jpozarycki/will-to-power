@@ -1,1 +1,29 @@
-<p>sidenav works!</p>
+<mat-nav-list>
+  <mat-list-item routerLink="/trainings" (click)="onClose()">
+    <mat-icon>whatshot
+    </mat-icon>
+    <span>Trainings</span>
+  </mat-list-item>
+  <mat-list-item routerLink="/basics" (click)="onClose()">
+    <mat-icon>child_care
+    </mat-icon>
+    <span>Basics</span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item routerLink="/register" (click)="onClose()">
+    <mat-icon>face</mat-icon>
+    <span>Register</span>
+  </mat-list-item>
+  <mat-list-item routerLink="/login" (click)="onClose()">
+    <mat-icon>input</mat-icon>
+    <span>Log in</span>
+  </mat-list-item>
+  <mat-list-item routerLink="/my-account" (click)="onClose()">
+    <mat-icon>settings</mat-icon>
+    <span>My Account</span>
+  </mat-list-item>
+  <mat-list-item routerLink="" (click)="onClose()">
+    <mat-icon>power_settings_new</mat-icon>
+    <span>Log out</span>
+  </mat-list-item>
+</mat-nav-list>

@@ -14,6 +14,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { TrainingsComponent } from './trainings/trainings.component';
 import { BasicsComponent } from './basics/basics.component';
+import { MyAccountComponent } from './my-account/my-account.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BasicsComponent } from './basics/basics.component';
     SidenavComponent,
     WelcomeComponent,
     TrainingsComponent,
-    BasicsComponent
+    BasicsComponent,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,
