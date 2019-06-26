@@ -1,1 +1,15 @@
-<p>login works!</p>
+<section fxLayout="column" fxLayoutAlign="center center">
+  <h1>Welcome back!</h1>
+  <h2> Are you ready to work out?</h2>
+  <form fxLayout="column" fxLayoutAlign="center center" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input type="email" matInput formControlName="email" placeholder="E-mail">
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" matInput formControlName="password" placeholder="Password">
+    </mat-form-field>
+    <div>
+      <button mat-raised-button [disabled]="loginForm.invalid">Sign in</button>
+    </div>
+  </form>
+</section>
