@@ -4,6 +4,8 @@ section {
 mat-horizontal-stepper, mat-vertical-stepper {
   /*box-shadow: 13px 10px 51px 1px rgba(0,0,0,0.81);*/
   width: 60%;
+  background-color: rgba(0,0,0,0);
+
 }
 .submit-button {
   background-color: black;
@@ -14,5 +16,3 @@ mat-horizontal-stepper, mat-vertical-stepper {
 .submit-button:hover {
   background-color: #b10020;
 }
-
-

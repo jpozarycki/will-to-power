@@ -6,3 +6,8 @@
 main {
   height: calc(100vh - 65px);
 }
+
+mat-sidenav {
+  min-width: 150px;
+  width: 25vw;
+}
