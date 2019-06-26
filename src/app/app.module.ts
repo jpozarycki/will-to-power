@@ -16,6 +16,10 @@ import { TrainingsComponent } from './trainings/trainings.component';
 import { BasicsComponent } from './basics/basics.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

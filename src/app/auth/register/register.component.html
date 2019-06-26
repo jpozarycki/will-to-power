@@ -35,13 +35,13 @@
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-raised-button [disabled]="passwordForm.invalid || emailForm.invalid || namesForm.invalid"
-                  class="submit-button">Submit
+                  class="submit-button" (click)="onSubmit()">Submit
           </button>
         </div>
       </form>
     </mat-step>
   </mat-horizontal-stepper>
-  <mat-vertical-stepper fxHide.gt-sm linear="true" fxFlex.xs="width: 100%!important">
+  <mat-vertical-stepper fxHide.gt-sm linear="true" fxFlex.xs="width: 100%">
     <mat-step [stepControl]="namesForm">
       <form [formGroup]="namesForm" fxLayout="column" fxLayoutAlign="center center">
         <ng-template matStepLabel>Fill out your name</ng-template>
