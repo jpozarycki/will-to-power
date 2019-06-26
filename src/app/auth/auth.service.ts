@@ -5,13 +5,17 @@ import {Store} from '@ngrx/store';
 import * as fromRoot from '../app.reducer';
 import * as Auth from './auth.actions';
 import {Router} from '@angular/router';
+import {UiService} from '../shared/ui/ui.service';
 
 @Injectable(
   {providedIn: 'root'}
 )
 export class AuthService {
 
-  constructor(private afAuth: AngularFireAuth, private store: Store<fromRoot.State>, private router: Router) {
+  constructor(private afAuth: AngularFireAuth,
+              private store: Store<fromRoot.State>,
+              private router: Router,
+              private uiService: UiService) {
   }
 
   loginUser(authData: AuthData) {
@@ -20,10 +24,12 @@ export class AuthService {
       .signInWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
           console.log(result);
+          this.router.navigate(['/trainings']);
         }
       )
       .catch(error => {
         console.log(error);
+        this.uiService.showSnackbar(error, null, 3000);
       });
   }
 
@@ -32,9 +38,11 @@ export class AuthService {
       .createUserWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
         console.log(result);
+        this.router.navigate(['/trainings']);
       })
       .catch(error => {
         console.log(error);
+        this.uiService.showSnackbar(error, null, 3000);
       });
   }
 

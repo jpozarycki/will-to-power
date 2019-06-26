@@ -30,6 +30,7 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     const email = this.emailForm.value.email;
     const password = this.passwordForm.value.password;
+    console.log('jestem w komp');
     this.authService.registerUser({email, password});
   }
 }

@@ -5,7 +5,7 @@ import {
   MatDividerModule, MatFormFieldModule,
   MatIconModule, MatInputModule,
   MatListModule,
-  MatSidenavModule,
+  MatSidenavModule, MatSnackBarModule,
   MatStepperModule,
   MatToolbarModule
 } from '@angular/material';
@@ -22,7 +22,8 @@ const moduleElements =
     MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSnackBarModule
   ];
 
 @NgModule({

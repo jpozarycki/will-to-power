@@ -77,7 +77,7 @@
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-raised-button [disabled]="passwordForm.invalid || emailForm.invalid || namesForm.invalid"
-                  class="submit-button">Submit
+                  class="submit-button" (click)="onSubmit()">Submit
           </button>
         </div>
       </form>
